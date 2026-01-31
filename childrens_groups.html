@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фехтование для детей 5-8 лет Казань | Группа "Мушкетеры"</title>
+    <meta name="description"
+        content="Игровая методика обучения фехтованию для самых маленьких. Развиваем координацию, дисциплину и умение дружить. Безопасные мечи.">
+
+    <script src="js/tailwindcss.js"></script>
+
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <script src="js/lucide.js"></script>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        /* Скрытие скроллбара */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 selection:bg-orange-100 selection:text-orange-900 pb-20 md:pb-0">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 h-20 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 cursor-pointer group">
+                <img src="img/logo.svg" alt="MANUEL Academy" class="h-12 w-auto">
+            </a>
+
+            <!-- Desktop Menu (Grouped & Clean) -->
+            <div
+                class="hidden md:flex space-x-8 items-center font-bold text-sm uppercase tracking-widest text-slate-500">
+
+                <!-- Dropdown: Programs -->
+                <div class="relative group py-6">
+                    <button
+                        class="flex items-center space-x-1 hover:text-orange-600 transition group-hover:text-orange-600">
+                        <span>ПРОГРАММЫ</span>
+                        <i data-lucide="chevron-down" class="w-3 h-3 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="childrens_groups.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
+                            <span class="block text-slate-900 font-black">Детям (5-8 лет)</span>
+                            <span class="block text-[10px] text-slate-400 normal-case tracking-normal">Игровая
+                                методика</span>
+                        </a>
+                        <a href="teenagers.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
+                            <span class="block text-slate-900 font-black">Подросткам (9-15)</span>
+                            <span class="block text-[10px] text-slate-400 normal-case tracking-normal">Развитие
+                                характера</span>
+                        </a>
+                        <a href="adults.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
+                            <span class="block text-slate-900 font-black">Взрослым (18+)</span>
+                            <span class="block text-[10px] text-slate-400 normal-case tracking-normal">Фитнес и
+                                хобби</span>
+                        </a>
+                        <div class="h-px bg-slate-100 my-1"></div>
+                        <a href="summer_camp.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-green-50 hover:text-green-700 transition">
+                            <span class="block text-green-700 font-black flex items-center"><i data-lucide="sun"
+                                    class="w-3 h-3 mr-1"></i> Летний лагерь</span>
+                        </a>
+                        <a href="private.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
+                            <span class="block text-slate-900 font-bold">Индивидуально</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="schedule.html" class="hover:text-orange-600 transition relative py-2">РАСПИСАНИЕ</a>
+                <a href="prices.html" class="hover:text-orange-600 transition relative py-2">ЦЕНЫ</a>
+
+                <!-- Dropdown: Academy -->
+                <div class="relative group py-6">
+                    <button
+                        class="flex items-center space-x-1 hover:text-orange-600 transition group-hover:text-orange-600">
+                        <span>АКАДЕМИЯ</span>
+                        <i data-lucide="chevron-down" class="w-3 h-3 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="coaches.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">Тренеры</a>
+                        <a href="about_us.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">О
+                            нас</a>
+                        <a href="gallery.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">Галерея</a>
+                        <a href="blog.html"
+                            class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">Блог</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" class="hover:text-orange-600 transition relative py-2">КОНТАКТЫ</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://t.me/manuel_academy" target="_blank" rel="noopener noreferrer"
+                    class="hidden lg:flex w-10 h-10 items-center justify-center text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded-full transition"
+                    title="Мы в Telegram">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </a>
+
+                <a href="tel:+79274250351" class="text-slate-900 font-bold text-sm hover:text-orange-600 transition">+7
+                    (927) 425-03-51</a>
+                <button onclick="openModal()"
+                    class="bg-orange-600 text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-orange-200 transition-all hover:-translate-y-0.5 flex items-center group">
+                    <span>Записаться</span>
+                </button>
+            </div>
+
+            <button class="md:hidden text-slate-900" onclick="toggleMobileMenu()" aria-label="Открыть меню">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Subpage Version) -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 shadow-xl flex-col space-y-4 md:hidden overflow-y-auto max-h-[80vh]">
+
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Программы</p>
+            <a href="childrens_groups.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-700 hover:text-orange-600 transition pl-4 border-l-2 border-slate-100 hover:border-orange-600">Детям
+                (5-8)</a>
+            <a href="teenagers.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-700 hover:text-orange-600 transition pl-4 border-l-2 border-slate-100 hover:border-orange-600">Подросткам
+                (9-15)</a>
+            <a href="adults.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-700 hover:text-orange-600 transition pl-4 border-l-2 border-slate-100 hover:border-orange-600">Взрослым</a>
+            <a href="summer_camp.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-green-600 hover:text-green-700 transition pl-4 border-l-2 border-green-100 hover:border-green-600">Летний
+                лагерь ☀️</a>
+            <a href="private.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-700 hover:text-orange-600 transition pl-4 border-l-2 border-slate-100 hover:border-orange-600">Индивидуально</a>
+
+            <div class="h-px bg-slate-100 my-2"></div>
+
+            <a href="schedule.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-900 hover:text-orange-600 transition">Расписание</a>
+            <a href="prices.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-900 hover:text-orange-600 transition">Цены</a>
+            <a href="coaches.html" onclick="toggleMobileMenu()"
+                class="block text-lg font-bold text-slate-900 hover:text-orange-600 transition">Тренеры</a>
+
+            <div class="h-px bg-slate-100 my-2"></div>
+
+            <a href="about_us.html" onclick="toggleMobileMenu()"
+                class="block text-sm font-medium text-slate-500 hover:text-orange-600 transition">О нас</a>
+            <a href="gallery.html" onclick="toggleMobileMenu()"
+                class="block text-sm font-medium text-slate-500 hover:text-orange-600 transition">Галерея</a>
+            <a href="blog.html" onclick="toggleMobileMenu()"
+                class="block text-sm font-medium text-slate-500 hover:text-orange-600 transition">Блог</a>
+            <a href="contacts.html" onclick="toggleMobileMenu()"
+                class="block text-sm font-medium text-slate-500 hover:text-orange-600 transition">Контакты</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+
+        <!-- HERO: Gamification -->
+        <section class="relative py-16 px-6 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative z-10">
+                    <span
+                        class="text-green-600 font-black text-xs uppercase tracking-widest border-b border-green-200 pb-2 mb-6 inline-block">Группа
+                        "Мушкетеры" (5-8 лет)</span>
+                    <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
+                        ОТОРВЕМ ОТ ГАДЖЕТОВ <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">И ДАДИМ
+                            В РУКИ РАПИРУ!</span>
+                    </h1>
+                    <p class="text-lg text-slate-500 max-w-lg leading-relaxed font-medium mb-8">
+                        У нас нет скучных лекций. Каждая тренировка — это игра, где ребенок становится героем, учится
+                        защищать себя и побеждать честно.
+                    </p>
+
+                    <!-- Schedule Info Badge -->
+                    <div
+                        class="inline-flex items-center bg-slate-100 px-5 py-3 rounded-2xl border border-slate-200 mb-8">
+                        <i data-lucide="clock" class="w-5 h-5 text-slate-400 mr-3"></i>
+                        <span class="text-sm font-bold text-slate-700">Занятия 2 раза в неделю по 60 минут</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button onclick="openModal()"
+                            class="bg-green-600 text-white px-8 py-4 rounded-2xl font-black shadow-xl shadow-green-200 hover:bg-green-700 transition transform hover:-translate-y-1">
+                            Стать героем (0₽)
+                        </button>
+                    </div>
+                </div>
+                <!-- Interactive/Visual Element -->
+                <div class="relative h-[400px] lg:h-[500px]">
+                    <div class="absolute inset-0 bg-green-50 rounded-[3rem] rotate-2"></div>
+                    <img src="img/d1.webp"
+                        class="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl border-8 border-white -rotate-2 hover:rotate-0 transition duration-500"
+                        alt="Счастливый ребенок с рапирой">
+
+                    <!-- Sticker -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl rotate-6 animate-bounce">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">🎮</span>
+                            <span class="font-black text-slate-900 text-sm">Интереснее,<br>чем планшет!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEMS SOLVED (Digital Detox) -->
+        <section class="py-24 px-6 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900">ПОЧЕМУ РОДИТЕЛИ ВЫБИРАЮТ НАС?</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="phone-off" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Цифровой Детокс</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            На час ребенок полностью забывает о телефоне, TikTok и играх. Живое общение, эмоции и
+                            движение.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition duration-300">
+                        <div
+                            class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Развитие мозга</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Фехтование развивает скорость мышления и реакцию. Это помогает лучше учиться в школе и
+                            осваивать математику.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition duration-300">
+                        <div
+                            class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-3">Уверенность в себе</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Скромные дети раскрываются, а гиперактивные учатся направлять энергию в мирное русло.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SAFETY (Soft Weapons) -->
+        <section class="py-24 px-6 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <img src="img/d2.webp" class="rounded-[3rem] shadow-2xl" alt="Детская экипировка">
+                    <div
+                        class="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 max-w-xs hidden md:block">
+                        <p class="text-sm font-bold text-slate-700 italic">"Мама, это совсем не больно! Как будто
+                            пальчиком тронули"</p>
+                        <p class="text-xs text-slate-400 mt-2 text-right">— Саша, 6 лет</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <span
+                        class="text-orange-600 font-black text-xs uppercase tracking-widest border-b border-orange-200 pb-2 mb-6 inline-block">Безопасность
+                        100%</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">ЭТО НЕ БОЛЬНО. <br>ПРАВДА.</h2>
+                    <p class="text-lg text-slate-500 mb-8">
+                        Мы используем настоящее спортивное оружие и полную защиту. Клинки из специальной гибкой стали
+                        мягко сгибаются при контакте, а костюмы гасит любые удары. Это безопаснее, чем футбол.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4"></i>
+                            <span class="font-bold text-slate-700">Гибкий клинок (нельзя пораниться)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4"></i>
+                            <span class="font-bold text-slate-700">Плоский наконечник-кнопка вместо острия</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4"></i>
+                            <span class="font-bold text-slate-700">Профессиональная маска (защита лица 100%)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS (Social Proof) -->
+        <section class="py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">ЧТО ГОВОРЯТ МАМЫ И ПАПЫ</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 relative">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600 text-xl">
+                                Е</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Елена В.</h4>
+                                <p class="text-xs text-slate-500">Сын Миша, 6 лет</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            "Мы пробовали карате и футбол — Миша везде стеснялся. А здесь его зацепили шпаги!
+                            Анна так мягко его вовлекла, что через месяц он уже сам бежал на тренировку. Стал увереннее
+                            в
+                            себе."
+                        </p>
+                        <div class="text-yellow-400 mt-4 text-sm">★★★★★</div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 relative">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div
+                                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center font-bold text-orange-600 text-xl">
+                                С</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Сергей К.</h4>
+                                <p class="text-xs text-slate-500">Дочь Алиса, 7 лет</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            "Мне нравится, что здесь не просто беготня, а развитие мозга. Алиса стала внимательнее
+                            делать
+                            уроки. Тренеры — настоящие педагоги, никакой грубости."
+                        </p>
+                        <div class="text-yellow-400 mt-4 text-sm">★★★★★</div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 relative">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600 text-xl">
+                                О</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Ольга М.</h4>
+                                <p class="text-xs text-slate-500">Сын Артем, 5 лет</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            "Боялась, что будет опасно. Но когда увидела профессиональную экипировку и защиту,
+                            успокоилась.
+                            Для мальчика — идеальный спорт. Благородно, красиво и безопасно."
+                        </p>
+                        <div class="text-yellow-400 mt-4 text-sm">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COACH SPOTLIGHT (Trust) -->
+        <section class="py-24 px-6 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative order-2 lg:order-1">
+                        <div class="absolute inset-0 bg-green-200 rounded-[3rem] rotate-3 blur-xl opacity-30"></div>
+                        <img src="img/d3.webp"
+                            class="relative rounded-[3rem] shadow-2xl skew-y-2 hover:skew-y-0 transition duration-500 border-4 border-white"
+                            alt="Диляра Ильдаровна">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl rotate-3">
+                            <p class="text-3xl font-black text-orange-500 mb-1">15</p>
+                            <p class="text-xs font-bold text-slate-500 uppercase">Минут чтобы<br>найти общий язык</p>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span class="text-green-600 font-black text-xs uppercase tracking-widest mb-4 block">Ваш
+                            Наставник</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">ДИЛЯРА ИЛЬДАРОВНА</h2>
+                        <h3 class="text-xl font-bold text-slate-600 mb-6">Педагог, КМС</h3>
+                        <p class="text-lg text-slate-500 mb-8 leading-relaxed">
+                            "В 5 лет главное — не медали, а любовь к спорту. Я знаю, как превратить тренировку в
+                            увлекательное приключение, где каждый ребенок чувствует себя супергероем."
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 shrink-0"></i>
+                                <span class="text-slate-700 font-bold">Специализация: дети 5-8 лет</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 shrink-0"></i>
+                                <span class="text-slate-700 font-bold">Сертификат "Гуманная педагогика"</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 shrink-0"></i>
+                                <span class="text-slate-700 font-bold">Опыт работы 3+ лет</span>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <a href="coaches.html"
+                                class="text-green-600 font-bold hover:text-green-700 transition flex items-center">
+                                Подробнее о тренере <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY (Visual Proof) -->
+        <section class="py-12 px-6 bg-slate-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center justify-between mb-10">
+                    <h2 class="text-3xl font-black text-white">АТМОСФЕРА В ЗАЛЕ</h2>
+                    <a href="gallery.html" class="text-orange-500 font-bold hover:text-orange-400 text-sm">Смотреть все
+                        →</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-96">
+                    <div class="col-span-2 row-span-2 relative rounded-3xl overflow-hidden group">
+                        <img src="img/6.webp"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Дети фехтуют">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden group">
+                        <img src="img/7.webp"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Тренировка">
+                    </div>
+                    <div class="row-span-2 relative rounded-3xl overflow-hidden group">
+                        <img src="img/1.webp"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Эмоции">
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden group">
+                        <img src="img/8.webp"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Экипировка">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRIAL LESSON DETAILS (New) -->
+        <section class="py-24 px-6 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">ЧТО БУДЕТ НА ПРОБНОМ ЗАНЯТИИ?</h2>
+                    <p class="text-lg text-slate-500">
+                        Никакой скучной теории. С первых минут ребенок погружается в мир фехтования.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div
+                        class="bg-white p-8 rounded-[2.5rem] shadow-sm relative overflow-hidden group hover:shadow-xl transition duration-300">
+                        <div
+                            class="absolute -right-4 -top-4 w-24 h-24 bg-green-50 rounded-full blur-2xl group-hover:bg-green-100 transition">
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div
+                                class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">
+                                1</div>
+                            <h3 class="font-black text-xl mb-4">Примерка экипировки</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Ребенок наденет настоящий фехтовальный костюм и маску чемпионов. Первые фото в образе
+                                мушкетера!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="bg-white p-8 rounded-[2.5rem] shadow-sm relative overflow-hidden group hover:shadow-xl transition duration-300">
+                        <div
+                            class="absolute -right-4 -top-4 w-24 h-24 bg-orange-50 rounded-full blur-2xl group-hover:bg-orange-100 transition">
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div
+                                class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">
+                                2</div>
+                            <h3 class="font-black text-xl mb-4">Боевая стойка</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                За 60 минут освоим правильную стойку и передвижения. Это база, которая развивает
+                                координацию.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="bg-white p-8 rounded-[2.5rem] shadow-sm relative overflow-hidden group hover:shadow-xl transition duration-300">
+                        <div
+                            class="absolute -right-4 -top-4 w-24 h-24 bg-blue-50 rounded-full blur-2xl group-hover:bg-blue-100 transition">
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div
+                                class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">
+                                3</div>
+                            <h3 class="font-black text-xl mb-4">Первая атака</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Научимся правильно держать рапиру и наносить свой первый укол (безопасный и точный).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (Objection Handling) -->
+        <section class="py-24 px-6 bg-white">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6">ЧАСТЫЕ ВОПРОСЫ</h2>
+                </div>
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">А если ребенок заплачет или испугается?</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Это нормально для 5 лет. Наши тренеры — педагоги. Мы не заставляем, а мягко предлагаем
+                            "поиграть". Обычно через 10 минут ребенок уже бегает довольный.
+                        </p>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Девочкам можно? Это не слишком агрессивно?
+                        </h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Нужно! Фехтование — это не драка, а танец с оружием. Оно развивает королевскую осанку,
+                            грацию и уверенность. У нас в группах 40% девочек.
+                        </p>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Что нужно купить для начала?</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Ничего! На весь период обучения мы выдаем всю экипировку (маску, костюм, оружие) бесплатно.
+                            Вам нужны только кроссовки, штаны и футболка.
+                        </p>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="border border-slate-200 rounded-3xl p-6 hover:shadow-lg transition">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Безопасно ли это?</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Абсолютно. Мы используем настоящее спортивное оружие и полнейшую защиту. Клинки из гибкой
+                            стали и 100% защита тела делают фехтование одним из самых безопасных видов спорта.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 px-6 md:pb-32 bg-green-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <i data-lucide="trophy" class="w-16 h-16 text-green-600 mx-auto mb-6"></i>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8">ПЕРВОЕ ЗАНЯТИЕ — БЕСПЛАТНО</h2>
+                <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto">
+                    Приводите ребенка попробовать. Мы выдадим форму, познакомим с ребятами и научим первой стойке. Если
+                    не понравится — никто не будет настаивать.
+                </p>
+                <button onclick="openModal()"
+                    class="inline-flex items-center justify-center bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-xl shadow-green-200 hover:bg-green-700 hover:scale-[1.02] transition-all">
+                    Записать юного чемпиона
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Full version) -->
+    <footer class="bg-slate-950 text-white pt-20 pb-10 px-6 mt-12 border-t border-slate-800">
+        <div
+            class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 border-b border-white/10 pb-12 mb-8">
+            <div class="col-span-2 lg:col-span-2">
+                <a href="index.html" class="inline-block mb-6 group">
+                    <img src="img/logo.svg" alt="MANUEL Academy" class="h-16 w-auto mb-4">
+                </a>
+                <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+                    Академия спортивного фехтования. Лицензия №12345.
+                    Мы растим не только чемпионов, но и достойных людей. Развиваем тело и интеллект через благородный
+                    спорт.
+                </p>
+                <!-- Socials -->
+                <div class="flex space-x-4">
+                    <a href="https://t.me/manuel_academy" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold uppercase text-xs tracking-widest text-slate-500 mb-6">Программы</h4>
+                <ul class="space-y-4 text-sm font-medium text-slate-400">
+                    <li><a href="childrens_groups.html" class="hover:text-orange-500 transition-colors">Детские группы
+                            (5-8 лет)</a>
+                    </li>
+                    <li><a href="teenagers.html" class="hover:text-orange-500 transition-colors">Подростки (9-15
+                            лет)</a></li>
+                    <li><a href="adults.html" class="hover:text-orange-500 transition-colors">Взрослые (18+)</a>
+                    </li>
+                    <li><a href="private.html" class="hover:text-orange-500 transition-colors">Индивидуальные
+                            уроки</a></li>
+                    <li><a href="summer_camp.html" class="hover:text-orange-500 transition-colors">Летний лагерь</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold uppercase text-xs tracking-widest text-slate-500 mb-6">Академия</h4>
+                <ul class="space-y-4 text-sm font-medium text-slate-400">
+                    <li><a href="about_us.html" class="hover:text-orange-500 transition-colors">О нас</a></li>
+                    <li><a href="coaches.html" class="hover:text-orange-500 transition-colors flex items-center">Тренеры
+                            <span
+                                class="ml-2 text-[10px] bg-orange-900/50 text-orange-400 px-1.5 py-0.5 rounded">PRO</span></a>
+                    </li>
+                    <li><a href="schedule.html" class="hover:text-orange-500 transition-colors">Расписание</a></li>
+                    <li><a href="prices.html" class="hover:text-orange-500 transition-colors">Цены</a></li>
+                    <li><a href="gallery.html" class="hover:text-orange-500 transition-colors">Галерея</a></li>
+                    <li><a href="blog.html" class="hover:text-orange-500 transition-colors">Блог</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold uppercase text-xs tracking-widest text-slate-500 mb-6">Контакты</h4>
+                <ul class="space-y-4 text-sm font-medium text-slate-400">
+                    <li class="flex items-start">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-3 mt-1 text-orange-600"></i>
+                        <div>
+                            <div class="mb-2">Суконная слобода: ул. Назарбаева, 21/64</div>
+                            <div class="mb-2">Козья слобода: ул. Вахитова, 10</div>
+                            <div>Иннополис: ул. Парковая, 22</div>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="phone" class="w-4 h-4 mr-3 text-orange-600"></i>
+                        <a href="tel:+79274250351" class="hover:text-white transition-colors">+7 (927) 425-03-51</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="mail" class="w-4 h-4 mr-3 text-orange-600"></i>
+                        <a href="mailto:info@manuel-kazan.ru"
+                            class="hover:text-white transition-colors">info@manuel-kazan.ru</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs text-slate-600 font-medium">
+            <div class="mb-4 md:mb-0">
+                &copy; 2026 Manuel Academy. Все права защищены.
+            </div>
+            <div class="flex space-x-6">
+                <a href="privacy_policy.html" class="hover:text-slate-400 transition-colors">Политика
+                    конфиденциальности</a>
+                <a href="terms.html" class="hover:text-slate-400 transition-colors">Договор оферты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+    </script>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

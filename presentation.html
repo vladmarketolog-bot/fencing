@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Презентация для родителей | Manuel Academy</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Auth Protection -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const isGuest = urlParams.get('access') === 'guest';
+
+        if (!isGuest && localStorage.getItem('manuel_coach_auth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <script src="js/tailwindcss.js"></script>
+
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <script src="js/lucide.js"></script>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar for cleaner look */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .snap-section {
+            scroll-snap-align: start;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white overflow-hidden">
+
+    <div class="snap-container">
+
+        <!-- SLIDE 1: INTRO / HOOK -->
+        <section class="snap-section flex items-center justify-center relative">
+            <div class="absolute inset-0">
+                <img src="img/1.webp" class="w-full h-full object-cover brightness-[0.4]" alt="Ребенок фехтовальщик">
+            </div>
+            <div class="relative z-10 text-center px-6 max-w-5xl">
+                <span
+                    class="text-orange-500 font-black text-lg md:text-xl uppercase tracking-[0.3em] mb-6 block animate-bounce">Презентация
+                    для родителей</span>
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">
+                    МЫ НЕ ПРОСТО <br> <span class="text-orange-600">УЧИМ ФЕХТОВАТЬ</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-slate-200 font-medium max-w-3xl mx-auto leading-relaxed">
+                    Мы формируем характер будущего лидера, уверенного в себе и своих решениях.
+                </p>
+                <i data-lucide="chevron-down" class="w-10 h-10 mx-auto mt-12 animate-pulse text-white/50"></i>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: THE PROBLEM -->
+        <section class="snap-section flex items-center bg-white text-slate-900 relative px-6">
+            <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-orange-600 font-black text-sm uppercase tracking-widest mb-4 block">Боли
+                        современных родителей</span>
+                    <h2 class="text-5xl md:text-7xl font-black mb-10 leading-tight">ЧТО ВАС <br><span
+                            class="text-red-500">БЕСПОКОИТ?</span></h2>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="bg-slate-100 p-4 rounded-2xl mr-6 group-hover:bg-red-50 transition">
+                                <i data-lucide="smartphone" class="w-8 h-8 text-slate-400 group-hover:text-red-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Гаджеты и "клиповое" мышление</h3>
+                                <p class="text-slate-500 text-lg">Ребенок живет в телефоне, теряет связь с реальностью и
+                                    не умеет концентрироваться дольше 15 секунд.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="bg-slate-100 p-4 rounded-2xl mr-6 group-hover:bg-red-50 transition">
+                                <i data-lucide="user-x" class="w-8 h-8 text-slate-400 group-hover:text-red-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Осанка и здоровье</h3>
+                                <p class="text-slate-500 text-lg">Сутулость от школьных парт и диванов. Слабый мышечный
+                                    корсет, отсутствие тонуса.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="bg-slate-100 p-4 rounded-2xl mr-6 group-hover:bg-red-50 transition">
+                                <i data-lucide="frown" class="w-8 h-8 text-slate-400 group-hover:text-red-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Неуверенность</h3>
+                                <p class="text-slate-500 text-lg">Страх ошибки, зажатость, неумение постоять за себя и
+                                    принимать решения в стрессе.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visual for problems -->
+                <div class="hidden md:block relative h-[60vh] rounded-[3rem] overflow-hidden">
+                    <img src="img/t2.webp" class="w-full h-full object-cover opacity-80" alt="Проблема">
+                    <div class="absolute inset-0 bg-red-900/10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: THE SOLUTION -->
+        <section class="snap-section flex items-center relative overflow-hidden px-6">
+            <div class="absolute inset-0">
+                <img src="img/p1.webp" class="w-full h-full object-cover brightness-[0.3]" alt="Решение">
+            </div>
+            <div class="max-w-7xl mx-auto w-full relative z-10 text-center">
+                <span
+                    class="bg-orange-600 text-white px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm mb-6 inline-block">Решение</span>
+                <h2 class="text-5xl md:text-7xl font-black mb-8">ФЕХТОВАНИЕ — ЭТО <br><span
+                        class="text-orange-500">ИНТЕЛЛЕКТУАЛЬНЫЙ СПОРТ</span></h2>
+                <p class="text-2xl text-slate-300 max-w-3xl mx-auto mb-16 leading-normal">
+                    Единственный вид спорта, который развивает тело как атлетика, а мозг — как математика. Его называют
+                    "Шахматы в движении".
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <div class="text-4xl mb-4">⚡️</div>
+                        <h3 class="text-xl font-bold mb-2">Реакция</h3>
+                        <p class="text-slate-400">Нужно принять решение за 0.1 секунды. Это быстрее, чем в боксе.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-bold mb-2">Стратегия</h3>
+                        <p class="text-slate-400">Побеждает не сильный, а хитрый. Мы учим переигрывать умом.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <div class="text-4xl mb-4">👑</div>
+                        <h3 class="text-xl font-bold mb-2">Благородство</h3>
+                        <p class="text-slate-400">Уважение к сопернику и судье. Ритуал приветствия. Эстетика движений.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: PHILOSOPHY -->
+        <section class="snap-section flex items-center bg-slate-900 px-6 relative overflow-hidden">
+            <!-- Split Background -->
+            <div class="absolute left-0 top-0 w-1/2 h-full bg-slate-900 z-0 hidden md:block"></div>
+            <div class="absolute right-0 top-0 w-1/2 h-full z-0 hidden md:block">
+                <img src="img/p3.webp" class="w-full h-full object-cover brightness-75" alt="Философия">
+            </div>
+
+            <div class="max-w-7xl mx-auto w-full relative z-10 grid md:grid-cols-2 gap-16 items-center">
+                <div class="pr-8">
+                    <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">МЫ НЕ УЧИМ <br><span
+                            class="text-red-500 line-through decoration-4 decoration-white">ДРАТЬСЯ</span></h2>
+                    <h2 class="text-5xl md:text-7xl font-black mb-10 text-orange-500">МЫ УЧИМ ДУМАТЬ</h2>
+                    <p class="text-xl text-slate-300 leading-relaxed mb-8">
+                        Наши ученики — это не уличные бойцы. Это интеллектуальная элита. Они умеют контролировать
+                        эмоции, анализировать ситуацию и побеждать красиво.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="h-px bg-slate-700 w-24"></div>
+                        <span class="text-slate-500 uppercase font-bold tracking-widest text-sm">Философия Manuel</span>
+                    </div>
+                </div>
+                <div class="md:hidden h-64 rounded-xl overflow-hidden mb-8">
+                    <img src="img/p3.webp" class="w-full h-full object-cover" alt="Философия">
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: SAFETY -->
+        <section class="snap-section flex items-center bg-white text-slate-900 px-6">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-16">
+                    <span class="text-green-600 font-black text-sm uppercase tracking-widest mb-4 block">Безопасность
+                        превыше всего</span>
+                    <h2 class="text-4xl md:text-6xl font-black">ЭТО <span class="text-green-600">БЕЗОПАСНО?</span></h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6">
+                        <div
+                            class="relative w-48 h-48 mx-auto mb-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-24 h-24 text-green-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Сталь Maraging</h3>
+                        <p class="text-slate-500">Клинки сделаны из специальной гибкой стали. При уколе они сгибаются,
+                            амортизируя удар. Сила удара — как нажатие пальцем.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div
+                            class="relative w-48 h-48 mx-auto mb-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <img src="img/p2.webp" class="w-full h-full object-cover rounded-full opacity-80"
+                                style="clip-path: circle();" alt="Экипировка">
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Защита 350N</h3>
+                        <p class="text-slate-500">Костюмы сделаны из кевлара (как бронежилеты). Они выдерживают нагрузку
+                            в 350 Ньютон. Пробить их невозможно.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div
+                            class="relative w-48 h-48 mx-auto mb-8 bg-green-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="bar-chart-2" class="w-24 h-24 text-green-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4">Статистика</h3>
+                        <p class="text-slate-500">Фехтование занимает 8-е место по безопасности. Травматичность ниже,
+                            чем в футболе, гимнастике или баскетболе.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: COACHES -->
+        <section class="snap-section flex items-center bg-slate-50 text-slate-900 px-6">
+            <div class="max-w-7xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-black mb-12 text-center">НАСТАВНИКИ, <span
+                        class="text-orange-600">А НЕ ПРОСТО ТРЕНЕРЫ</span></h2>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Coach 1 -->
+                    <div
+                        class="bg-white p-8 rounded-[2.5rem] shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <img src="img/TT1.webp" class="w-32 h-32 rounded-3xl object-cover shadow-lg" alt="Регина">
+                        <div>
+                            <h3 class="text-2xl font-black mb-1">Регина Ринатовна</h3>
+                            <span class="text-orange-600 font-bold text-sm uppercase mb-4 block">Старший тренер, МС,
+                                Педагог</span>
+                            <p class="text-slate-500 text-sm italic mb-4">"Видит талант в каждом ребенке. Помогает
+                                раскрыться даже самым скромным."</p>
+                            <div class="flex gap-2">
+                                <span class="bg-slate-100 text-xs font-bold px-3 py-1 rounded-lg">Стаж 12 лет</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coach 2 -->
+                    <div
+                        class="bg-white p-8 rounded-[2.5rem] shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <img src="img/TT2.webp" class="w-32 h-32 rounded-3xl object-cover shadow-lg" alt="Адель">
+                        <div>
+                            <h3 class="text-2xl font-black mb-1">Адель Руслановна</h3>
+                            <span class="text-orange-600 font-bold text-sm uppercase mb-4 block">КМС, Педагог,
+                                Психолог</span>
+                            <p class="text-slate-500 text-sm italic mb-4">"Специалист по подростковой психологии. Умеет
+                                найти подход к трудным возрастам."</p>
+                            <div class="flex gap-2">
+                                <span class="bg-slate-100 text-xs font-bold px-3 py-1 rounded-lg">Воспитала 5 КМС</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: COMMUNITY -->
+        <section class="snap-section flex items-center relative overflow-hidden px-6">
+            <div class="absolute inset-0">
+                <img src="img/2.webp" class="w-full h-full object-cover brightness-[0.4]" alt="Команда">
+            </div>
+            <div class="max-w-4xl mx-auto w-full relative z-10 text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 text-white">ЛУЧШИЕ ДРУЗЬЯ — <br><span
+                        class="text-orange-500">ЗДЕСЬ</span></h2>
+                <p class="text-2xl text-slate-300 leading-relaxed mb-12">
+                    Вместо онлайн-игр и чатов — живое общение. Совместные выезды, праздники, поддержка на соревнованиях.
+                    Ваш ребенок попадет в окружение целеустремленных сверстников.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <span class="bg-white/20 backdrop-blur px-6 py-3 rounded-xl font-bold">🤝 Поддержка</span>
+                    <span class="bg-white/20 backdrop-blur px-6 py-3 rounded-xl font-bold">🎉 Праздники</span>
+                    <span class="bg-white/20 backdrop-blur px-6 py-3 rounded-xl font-bold">🏆 Командный дух</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: CAMP -->
+        <section class="snap-section flex items-center bg-green-900 text-white px-6 relative overflow-hidden">
+            <!-- Background Texture -->
+            <div class="absolute inset-0 opacity-20 bg-[url('img/nature.png')]">
+            </div>
+
+            <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
+                <div>
+                    <span
+                        class="bg-yellow-400 text-green-900 px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm mb-6 inline-block">Летняя
+                        программа</span>
+                    <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">КАНИКУЛЫ <br> СО СМЫСЛОМ</h2>
+                    <p class="text-xl text-green-100 leading-relaxed mb-8">
+                        Наш легендарный фехтовальный лагерь. 2 недели без телефонов. Свежий воздух, 3 тренировки в день,
+                        бассейн, творчество и вечерние костры.
+                    </p>
+                    <ul class="space-y-4 text-lg font-medium">
+                        <li class="flex items-center"><i data-lucide="sun" class="w-6 h-6 text-yellow-400 mr-4"></i>
+                            Полная перезагрузка</li>
+                        <li class="flex items-center"><i data-lucide="sun" class="w-6 h-6 text-yellow-400 mr-4"></i>
+                            Самостоятельность</li>
+                        <li class="flex items-center"><i data-lucide="sun" class="w-6 h-6 text-yellow-400 mr-4"></i>
+                            Дружба на всю жизнь</li>
+                    </ul>
+                </div>
+                <div class="h-[50vh] rounded-[3rem] overflow-hidden shadow-2xl rotate-3 border-8 border-white/10">
+                    <!-- Placeholder/Generic camp image if specific not found -->
+                    <img src="img/3.webp" class="w-full h-full object-cover" alt="Лагерь">
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: VALUE / EQUIPMENT -->
+        <section class="snap-section flex items-center bg-white text-slate-900 px-6">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-16">
+                    <span
+                        class="bg-orange-100 text-orange-600 font-bold px-4 py-2 rounded-full uppercase tracking-wide text-sm mb-6 inline-block">Уникальное
+                        предложение</span>
+                    <h2 class="text-4xl md:text-6xl font-black">СКОЛЬКО ЭТО СТОИТ <br>В ДРУГИХ ШКОЛАХ?</h2>
+                </div>
+
+                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-12 border border-slate-200">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-400">Обычная секция фехтования:</h3>
+                            <div class="space-y-4 text-xl">
+                                <div class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span>Маска</span> <span class="font-medium text-slate-500">15 000 ₽</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span>Костюм</span> <span class="font-medium text-slate-500">25 000 ₽</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span>Оружие</span> <span class="font-medium text-slate-500">18 000 ₽</span>
+                                </div>
+                                <div class="flex justify-between pt-4 text-red-500 font-black text-2xl">
+                                    <span>Входной билет:</span> <span>~58 000 ₽</span>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-sm text-slate-400">*И это нужно покупать сразу, без гарантии, что
+                                ребенок останется.</p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-[2.5rem] p-10 shadow-2xl border-4 border-green-500 text-center transform md:scale-105">
+                            <h3 class="text-3xl font-black text-slate-900 mb-2">В MANUEL ACADEMY</h3>
+                            <div
+                                class="text- green-600 font-black text-xl mb-4 uppercase tracking-widest text-green-600">
+                                Экипировка выдается</div>
+                            <div class="text-[8rem] leading-none font-black text-slate-900 mb-4">0 <span
+                                    class="text-4xl text-slate-400 align-top">₽</span></div>
+                            <p class="text-lg font-bold text-slate-600">Вы платите только за абонемент.</p>
+                            <div
+                                class="mt-6 inline-block bg-green-100 text-green-700 px-4 py-2 rounded-xl font-bold text-sm">
+                                Экономия 58 000 ₽ на старте
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: PRICING -->
+        <section class="snap-section flex items-center bg-slate-900 px-6 relative overflow-hidden">
+            <div class="max-w-6xl mx-auto w-full relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-12 text-center">ВЫБЕРИТЕ СВОЙ ТЕМП</h2>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- START -->
+                    <div
+                        class="bg-white text-slate-900 rounded-[2.5rem] p-8 opacity-90 hover:opacity-100 transition duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-3xl font-black">СТАРТ</h3>
+                                <p class="text-slate-500 font-bold">Для знакомства со спортом</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-4xl font-black">7 000 ₽</div>
+                                <div class="text-sm text-slate-400">в месяц</div>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-lg">
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="w-6 h-6 text-green-500 mr-3"></i> 2 тренировки в неделю</li>
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="w-6 h-6 text-green-500 mr-3"></i> Вся экипировка включена</li>
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="w-6 h-6 text-green-500 mr-3"></i> Дневник спортсмена</li>
+                        </ul>
+                        <button
+                            class="w-full bg-slate-100 text-slate-900 py-4 rounded-2xl font-black hover:bg-slate-200 transition">ВЫБРАТЬ
+                            СТАРТ</button>
+                    </div>
+
+                    <!-- CLUB -->
+                    <div
+                        class="bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-[2.5rem] p-8 shadow-2xl transform scale-105 border-4 border-white/20">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-3xl font-black">КЛУБ</h3>
+                                <p class="text-white/80 font-bold">Выбор чемпионов</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-4xl font-black">9 500 ₽</div>
+                                <div class="text-sm text-white/60">в месяц</div>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-lg">
+                            <li class="flex items-center"><i data-lucide="check" class="w-6 h-6 text-white mr-3"></i> 3
+                                тренировки в неделю</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-6 h-6 text-white mr-3"></i>
+                                Соревнования</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-6 h-6 text-white mr-3"></i>
+                                Индивидуальные уроки</li>
+                            <li class="flex items-center"><i data-lucide="star"
+                                    class="w-6 h-6 text-yellow-300 mr-3"></i> Мастер-классы</li>
+                        </ul>
+                        <button
+                            class="w-full bg-white text-orange-600 py-4 rounded-2xl font-black hover:bg-slate-50 transition shadow-lg">ВСТУПИТЬ
+                            В КЛУБ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 11: CTA -->
+        <section class="snap-section flex items-center justify-center bg-white px-6">
+            <div class="text-center max-w-3xl">
+                <span class="text-6xl mb-6 block animate-bounce">🎁</span>
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8">СПЕЦПРЕДЛОЖЕНИЕ <br> <span
+                        class="text-orange-600">ТОЛЬКО СЕГОДНЯ</span></h2>
+                <p class="text-2xl text-slate-500 mb-12">
+                    При покупке абонемента в день пробного занятия — <br><b>Дневник Фехтовальщика</b> и <b>Фирменная
+                        футболка</b> в подарок.
+                </p>
+
+                <button onclick="alert('Переход к оплате / форме')"
+                    class="bg-orange-600 text-white px-16 py-8 rounded-[2rem] font-black text-2xl shadow-2xl shadow-orange-500/50 hover:scale-105 transition-transform hover:bg-orange-700">
+                    ЗАБРАТЬ ПОДАРОК
+                </button>
+                <div class="mt-8">
+                    <a href="index.html"
+                        class="text-slate-400 font-bold uppercase tracking-widest text-sm hover:text-orange-600 transition">Вернуться
+                        на сайт</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

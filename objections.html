@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скрипты продаж: Возражения | Manuel Academy</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="js/tailwindcss.js"></script>
+    <script src="js/lucide.js"></script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .script-card.active .answer {
+            display: block;
+        }
+
+        .script-card.active .icon-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script>
+        if (localStorage.getItem('manuel_coach_auth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 min-h-screen text-slate-900">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-4 px-6 md:px-12 flex items-center sticky top-0 z-50">
+        <a href="documents.html" class="bg-slate-100 p-2 rounded-xl text-slate-500 hover:bg-slate-200 transition mr-4">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+        </a>
+        <div>
+            <h1 class="text-xl font-black">Работа с возражениями</h1>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Скрипты продаж</p>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-8">
+
+        <div class="space-y-4">
+
+            <!-- Objection 1: EXPENSIVE -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm cursor-pointer hover:shadow-md transition script-card"
+                onclick="toggleCard(this)">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-lg font-black text-red-500">"Это дорого" (9 500 р/мес)</h2>
+                    <i data-lucide="chevron-down"
+                        class="w-5 h-5 text-slate-400 icon-chevron transition-transform duration-300"></i>
+                </div>
+                <div class="text-sm text-slate-400 mb-2 font-medium">Родитель сомневается в цене абонемента.</div>
+
+                <div class="answer hidden pt-4 border-t border-slate-100 mt-4">
+                    <p class="text-slate-600 mb-4 font-bold">🎯 Ответ:</p>
+                    <div
+                        class="bg-green-50 p-4 rounded-xl text-slate-800 text-sm leading-relaxed mb-4 border-l-4 border-green-500">
+                        "Я вас прекрасно понимаю, сумма ощутимая. Но давайте посмотрим, что в неё входит. <br><br>
+                        В обычной секции вам пришлось бы прямо сейчас купить экипировку за <b>60 000 рублей</b> (маска,
+                        костюм, оружие). У нас всё это выдается <b>бесплатно</b>. <br><br>
+                        Если разделить 60 тысяч на год — это уже экономия 5000 рублей в месяц. То есть, по факту,
+                        тренировки обходятся вам в 4 500 р, а остальное мы берем на себя. Согласитесь, это честное
+                        предложение?"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objection 2: THINK -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm cursor-pointer hover:shadow-md transition script-card"
+                onclick="toggleCard(this)">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-lg font-black text-orange-500">"Мы подумаем"</h2>
+                    <i data-lucide="chevron-down"
+                        class="w-5 h-5 text-slate-400 icon-chevron transition-transform duration-300"></i>
+                </div>
+                <div class="text-sm text-slate-400 mb-2 font-medium">Родитель хочет уйти без оплаты.</div>
+
+                <div class="answer hidden pt-4 border-t border-slate-100 mt-4">
+                    <p class="text-slate-600 mb-4 font-bold">🎯 Ответ:</p>
+                    <div
+                        class="bg-green-50 p-4 rounded-xl text-slate-800 text-sm leading-relaxed mb-4 border-l-4 border-green-500">
+                        "Конечно, нужно взвесить. Скажите честно, самому [Имя ребенка] понравилось? Я видел, как у него
+                        горели глаза на спарринге. <br><br>
+                        Дело в том, что у нас сейчас формируется группа, и осталось всего 2 места. Если вы уйдете
+                        думать, я не смогу придержать место. <br><br>
+                        Давайте сделаем так: вы забронируете место сейчас (это ни к чему не обязывает), а я подарю вам
+                        <b>Дневник Фехтовальщика</b> в подарок. Что скажете?"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objection 3: NO TIME -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm cursor-pointer hover:shadow-md transition script-card"
+                onclick="toggleCard(this)">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-lg font-black text-blue-500">"У нас нет времени / Школа"</h2>
+                    <i data-lucide="chevron-down"
+                        class="w-5 h-5 text-slate-400 icon-chevron transition-transform duration-300"></i>
+                </div>
+                <div class="text-sm text-slate-400 mb-2 font-medium">Родитель боится перегрузки.</div>
+
+                <div class="answer hidden pt-4 border-t border-slate-100 mt-4">
+                    <p class="text-slate-600 mb-4 font-bold">🎯 Ответ:</p>
+                    <div
+                        class="bg-green-50 p-4 rounded-xl text-slate-800 text-sm leading-relaxed mb-4 border-l-4 border-green-500">
+                        "Это самое частое опасение! Но знаете, парадокс: наши ученики начинают лучше учиться. <br><br>
+                        Фехтование — это не просто спорт, это 'шахматы в движении'. Оно развивает концентрацию. Ребенок,
+                        который час фехтовал, потом делает уроки в 2 раза быстрее, потому что умеет фокусироваться.
+                        <br><br>
+                        Попробуйте походить месяц. Если оценки упадут — мы вернем деньги за неиспользованные занятия."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objection 4: FAR -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm cursor-pointer hover:shadow-md transition script-card"
+                onclick="toggleCard(this)">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-lg font-black text-purple-500">"Далеко ездить"</h2>
+                    <i data-lucide="chevron-down"
+                        class="w-5 h-5 text-slate-400 icon-chevron transition-transform duration-300"></i>
+                </div>
+                <div class="text-sm text-slate-400 mb-2 font-medium">Логистика неудобна.</div>
+
+                <div class="answer hidden pt-4 border-t border-slate-100 mt-4">
+                    <p class="text-slate-600 mb-4 font-bold">🎯 Ответ:</p>
+                    <div
+                        class="bg-green-50 p-4 rounded-xl text-slate-800 text-sm leading-relaxed mb-4 border-l-4 border-green-500">
+                        "Понимаю, возить ребенка по пробкам — тот еще квест. Но спросите себя: ради чего ездить?
+                        <br><br>
+                        Секций много в каждом дворе. А школа воспитания личности, где ребенку дадут уверенность на всю
+                        жизнь — это штучный товар. <br><br>
+                        У нас многие ездят с другого конца города, потому что видят, как меняется характер ребенка. Это
+                        инвестиция, которая окупится."
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleCard(card) {
+            // Close all others (optional, maybe better to keep open)
+            // document.querySelectorAll('.script-card').forEach(c => c !== card && c.classList.remove('active'));
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

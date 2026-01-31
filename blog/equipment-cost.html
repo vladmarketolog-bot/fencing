@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сколько стоит собрать ребенка на фехтование? Цены 2026 | Manuel Academy</title>
+    <meta name="description"
+        content="Сколько стоит маска, костюм и шпага? На чем можно сэкономить новичку? Подробный гайд по ценам на экипировку в Казани.">
+
+    <script src="../js/tailwindcss.js"></script>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <script src="../js/lucide.js"></script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 selection:bg-orange-100 selection:text-orange-900 pb-20 md:pb-0">
+
+    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 h-20 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-2 cursor-pointer group">
+                <span class="text-2xl font-extrabold tracking-tighter text-slate-900">MANUEL<span
+                        class="text-orange-600">.</span></span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../blog.html"
+                    class="font-bold text-sm uppercase tracking-widest text-slate-500 hover:text-orange-600 transition">←
+                    Назад в блог</a>
+            </div>
+            <button class="md:hidden text-slate-900" onclick="toggleMobileMenu()"><i data-lucide="menu"></i></button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 shadow-xl flex-col space-y-4 md:hidden">
+            <a href="../blog.html" class="block text-lg font-bold text-orange-600">← Вернуться в блог</a>
+            <a href="../index.html" class="block text-lg font-bold text-slate-900">На главную</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <header class="py-16 px-6 bg-white border-b border-slate-100">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex items-center space-x-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">
+                    <a href="../blog.html" class="hover:text-orange-600 transition">Блог</a>
+                    <span>/</span>
+                    <span class="text-orange-600">Экипировка</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">
+                    Сколько стоит собрать ребенка на фехтование в 2026 году?
+                </h1>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-6">
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center mr-3 font-bold text-slate-500">
+                            ДИ</div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Дмитрий Исаев</p>
+                            <p class="text-xs text-slate-500">Старший тренер</p>
+                        </div>
+                    </div>
+                    <div class="text-sm text-slate-400 font-bold">05 мая 2026</div>
+                </div>
+            </div>
+        </header>
+
+        <article class="max-w-3xl mx-auto px-6 py-12 prose prose-slate md:prose-lg text-slate-600 leading-relaxed">
+            <p>Хорошая новость: фехтование — не хоккей. Вам не нужно продавать машину, чтобы купить ребенку форму. Но и
+                не футбол, где нужны только кеды.</p>
+
+            <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">1. Первый месяц: 0 руб.</h3>
+            <p>В Manuel Academy мы выдаем всю экипировку на первый месяц занятий бесплатно. Маску, жилет, оружие
+                покупать не нужно. Нужны только кроссовки и спортивные штаны.</p>
+
+            <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">2. Базовый набор новичка (через 2-3 месяца)</h3>
+            <p>Когда ребенок втянулся, имеет смысл купить личные вещи:</p>
+            <ul class="list-disc pl-6 mb-4">
+                <li><strong>Маска (350N):</strong> ~5000 - 7000 ₽. Самый важный элемент защиты.</li>
+                <li><strong>Перчатка:</strong> ~1500 - 2000 ₽. Расходник, стирается за сезон.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">3. Полный комплект (для соревнований)</h3>
+            <p>Костюм (куртка + бриджи), набочник, электрокуртка и оружие. Полный комплект хорошего качества (PBT,
+                Allstar) обойдется в <strong>25 000 - 40 000 ₽</strong>. Этого хватит на 1.5 - 2 года, пока ребенок не
+                вырастет.</p>
+        </article>
+
+    </main>
+    <script>
+        lucide.createIcons();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+    </script>
+</body>
+
+</html>

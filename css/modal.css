@@ -1,0 +1,36 @@
+/* Modal Animation */
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Custom Radio for Modal */
+.radio-card:checked+div {
+    background-color: #fff7ed;
+    /* orange-50 */
+    border-color: #f97316;
+    /* orange-500 */
+    color: #9a3412;
+    /* orange-800 */
+}
+
+/* Mobile Sticky Button Animation */
+.sticky-btn-appear {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
