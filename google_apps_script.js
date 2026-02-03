@@ -1,4 +1,4 @@
-var SHEET_NAME = "Leads";
+var SHEET_NAME = "Manuel";
 var EMAIL_TO = "YOUR_EMAIL@gmail.com"; // <-- ЗАМЕНИТЕ НА ВАШ EMAIL
 var EMAIL_SUBJECT = "Новая заявка с сайта Manuel Academy";
 
@@ -20,7 +20,7 @@ function doPost(e) {
     var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
     var nextRow = sheet.getLastRow() + 1;
 
-    var newRow = headers.map(function(header) {
+    var newRow = headers.map(function (header) {
       if (header === "Timestamp") return new Date();
       return e.parameter[header] || e.parameter[header.toLowerCase()] || "";
     });
@@ -32,13 +32,13 @@ function doPost(e) {
     var type = e.parameter.type || "Не указан";
     var name = e.parameter.name || "Не указано";
     var phone = e.parameter.phone || "Не указан";
-    
+
     var emailBody = "Новая заявка!\n\n" +
-                    "Тип: " + type + "\n" +
-                    "Имя: " + name + "\n" +
-                    "Телефон: " + phone + "\n\n" +
-                    "Дата: " + new Date().toLocaleString() + "\n" +
-                    "Ссылка на таблицу: " + doc.getUrl();
+      "Тип: " + type + "\n" +
+      "Имя: " + name + "\n" +
+      "Телефон: " + phone + "\n\n" +
+      "Дата: " + new Date().toLocaleString() + "\n" +
+      "Ссылка на таблицу: " + doc.getUrl();
 
     MailApp.sendEmail({
       to: EMAIL_TO,
