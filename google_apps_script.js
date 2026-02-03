@@ -10,16 +10,34 @@ function doPost(e) {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = doc.getSheetByName(SHEET_NAME);
 
+    // Expected headers
+    var expectedHeaders = ["Timestamp", "Type", "Name", "Phone", "Status", "Notes",
+      "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+      "referrer", "page_url", "user_agent", "ip_address", "screen_res", "timezone"];
+
     // Create sheet if it doesn't exist
     if (!sheet) {
       sheet = doc.insertSheet(SHEET_NAME);
-      // Create headers
-      var headerRow = ["Timestamp", "Type", "Name", "Phone", "Status", "Notes",
-        "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
-        "referrer", "page_url", "user_agent", "ip_address", "screen_res", "timezone"];
-      sheet.appendRow(headerRow);
+      sheet.appendRow(expectedHeaders);
+    } else {
+      // Check for missing headers and append if needed
+      var lastCol = sheet.getLastColumn();
+      if (lastCol > 0) {
+        var currentHeaders = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+        // If we have fewer headers than expected, append the missing ones
+        if (currentHeaders.length < expectedHeaders.length) {
+          var missingHeaders = expectedHeaders.slice(currentHeaders.length);
+          if (missingHeaders.length > 0) {
+            sheet.getRange(1, currentHeaders.length + 1, 1, missingHeaders.length).setValues([missingHeaders]);
+          }
+        }
+      } else {
+        // Sheet exists but is empty
+        sheet.appendRow(expectedHeaders);
+      }
     }
 
+    // Refresh headers after potential update
     var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
     var nextRow = sheet.getLastRow() + 1;
 

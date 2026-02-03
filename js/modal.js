@@ -1,6 +1,6 @@
 // Modal Logic
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_Nrh1e90gC-btKHdqSAfhmf0hctxES3YDnfbBqlsHcH4c2bUMkoFWxrlv_vayVcYV/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxrjQsyOlaXTuSr2AYuyAEVeTPM0ptZyu3kr8XcRrgoD_OPrTkTwy0hXVyHvLHgDbw/exec";
 
 const MODAL_HTML = `
 <div id="modal-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
