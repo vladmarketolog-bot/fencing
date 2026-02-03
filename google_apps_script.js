@@ -54,13 +54,42 @@ function doPost(e) {
     var type = e.parameter.type || "Не указан";
     var name = e.parameter.name || "Не указано";
     var phone = e.parameter.phone || "Не указан";
-    var source = e.parameter.utm_source || "Прямой заход";
 
-    var emailBody = "Новая заявка!\n\n" +
+    // Analytics
+    var source = e.parameter.utm_source || "-";
+    var medium = e.parameter.utm_medium || "-";
+    var campaign = e.parameter.utm_campaign || "-";
+    var term = e.parameter.utm_term || "-";
+    var content = e.parameter.utm_content || "-";
+
+    var referrer = e.parameter.referrer || "Не определен";
+    var page = e.parameter.page_url || "Не определена";
+    var ip = e.parameter.ip_address || "Не определен";
+    var device = e.parameter.user_agent || "Не определено";
+    var screen = e.parameter.screen_res || "-";
+    var timezone = e.parameter.timezone || "-";
+
+    var emailBody = "Новая заявка с сайта!\n\n" +
+      "=== КОНТАКТЫ ===\n" +
       "Тип: " + type + "\n" +
       "Имя: " + name + "\n" +
       "Телефон: " + phone + "\n\n" +
-      "Источник: " + source + "\n" +
+
+      "=== МАРКЕТИНГ (UTM) ===\n" +
+      "Source (Источник): " + source + "\n" +
+      "Medium (Канал): " + medium + "\n" +
+      "Campaign (Кампания): " + campaign + "\n" +
+      "Term (Ключ): " + term + "\n" +
+      "Content (Контент): " + content + "\n\n" +
+
+      "=== ТЕХНИЧЕСКИЕ ДАННЫЕ ===\n" +
+      "IP адрес: " + ip + "\n" +
+      "Страница входа: " + page + "\n" +
+      "Referrer (Откуда): " + referrer + "\n" +
+      "Устройство: " + device + "\n" +
+      "Экран: " + screen + "\n" +
+      "Часовой пояс: " + timezone + "\n\n" +
+
       "Дата: " + new Date().toLocaleString() + "\n" +
       "Ссылка на таблицу: " + doc.getUrl();
 

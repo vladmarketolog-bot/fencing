@@ -191,15 +191,19 @@ async function getAnalyticsData() {
         }
     });
 
-    // Try to get IP (lightweight)
+    // Try to get IP (lightweight) with timeout
     try {
-        const res = await fetch('https://api.ipify.org?format=json');
-        if (res.ok) {
-            const json = await res.json();
+        const ipPromise = fetch('https://api.ipify.org?format=json').then(res => res.json());
+        const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 1500));
+
+        // Race: if ip takes > 1.5s, we skip it
+        const json = await Promise.race([ipPromise, timeoutPromise]);
+        if (json && json.ip) {
             analytics.ip = json.ip;
         }
     } catch (e) {
-        console.warn('IP fetch failed', e);
+        // Ignore timeout or error, just continue
+        console.warn('IP fetch skipped (timeout or error)');
     }
 
     return analytics;

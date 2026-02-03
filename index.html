@@ -72,7 +72,7 @@
 
     <link rel="stylesheet" href="css/fonts.css">
 
-    <script src="js/lucide.js"></script>
+    <script src="js/lucide.js" defer></script>
 
     <style>
         body {
@@ -109,7 +109,7 @@
     <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 h-20 transition-all">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2 cursor-pointer group">
-                <img src="img/logo.svg" alt="MANUEL Academy" class="h-12 w-auto">
+                <img src="img/logo.svg" alt="MANUEL Academy" class="h-12 w-auto" width="48" height="48">
             </a>
 
             <!-- Desktop Menu (Grouped & Clean) -->
@@ -312,28 +312,35 @@
                             style="transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black); mask-image: radial-gradient(white, black);">
                             <img src="img/1.webp" alt="Фехтование для детей"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
-                                alt="Современное фехтование для детей">
-                            <img src="img/2.webp" alt="Тренировка взрослых"
+                                alt="Современное фехтование для детей" fetchpriority="high">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/2.webp" alt="Тренировка взрослых"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Безопасная экипировка 2026">
-                            <img src="img/3.webp" alt="Соревнования по фехтованию"
+                                alt="Безопасная экипировка 2026" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/3.webp" alt="Соревнования по фехтованию"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Технологии в спорте">
-                            <img src="img/4.webp" alt="Эмоции победы"
+                                alt="Технологии в спорте" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/4.webp" alt="Эмоции победы"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Развитие реакции и интеллекта">
-                            <img src="img/5.webp" alt="Фехтовальная экипировка"
+                                alt="Развитие реакции и интеллекта" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/5.webp" alt="Фехтовальная экипировка"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Детские группы фехтования">
-                            <img src="img/6.webp" alt="Индивидуальный урок"
+                                alt="Детские группы фехтования" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/6.webp" alt="Индивидуальный урок"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Турниры и победы">
-                            <img src="img/7.webp" alt="Детская группа"
+                                alt="Турниры и победы" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/7.webp" alt="Детская группа"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Эмоции и характер">
-                            <img src="img/8.webp" alt="Турнир Manuel Academy"
+                                alt="Эмоции и характер" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="img/8.webp" alt="Турнир Manuel Academy"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Команда Manuel Academy">
+                                alt="Команда Manuel Academy" loading="lazy">
                         </div>
 
                         <!-- Gradient Overlay -->
@@ -376,6 +383,17 @@
                                 const dots = document.querySelectorAll('.slider-dot');
                                 let currentSlide = 0;
                                 const totalSlides = slides.length;
+
+                                // --- PERFORMANCE OPTIMIZATION: LOAD REST IMAGES AFTER START ---
+                                setTimeout(() => {
+                                    slides.forEach(img => {
+                                        if (img.dataset.src) {
+                                            img.src = img.dataset.src;
+                                            img.removeAttribute('data-src');
+                                        }
+                                    });
+                                }, 2500); // Start loading 2.5s after page load
+                                // -----------------------------------------------------------
 
                                 function showSlide(index) {
                                     slides.forEach(slide => {
@@ -562,7 +580,7 @@
                     <div class="relative order-2 lg:order-1">
                         <div class="absolute inset-0 bg-green-100 rounded-[3rem] rotate-3 transform"></div>
                         <img src="img/1.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
-                            alt="Ребенок занимается фехтованием">
+                            alt="Ребенок занимается фехтованием" loading="lazy">
                     </div>
                     <div class="order-1 lg:order-2">
                         <span
@@ -647,7 +665,7 @@
                     <div class="relative order-2">
                         <div class="absolute inset-0 bg-orange-100 rounded-[3rem] -rotate-3 transform"></div>
                         <img src="img/2.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
-                            alt="Взрослые на фехтовании">
+                            alt="Взрослые на фехтовании" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -709,7 +727,7 @@
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT1.webp"
                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                alt="Регина Ринатовна">
+                                alt="Регина Ринатовна" loading="lazy">
                         </div>
                         <h4 class="font-bold text-lg ml-2">Регина Ринатовна</h4>
                         <p class="text-slate-500 text-xs mb-4 ml-2">Старший тренер, МС</p>
@@ -724,7 +742,7 @@
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT3.webp"
                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                alt="Диляра Ильдаровна">
+                                alt="Диляра Ильдаровна" loading="lazy">
                         </div>
                         <h4 class="font-bold text-lg ml-2">Диляра Ильдаровна</h4>
                         <p class="text-slate-500 text-xs mb-4 ml-2">Тренер детей 5-8 лет</p>
@@ -739,7 +757,7 @@
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT2.webp"
                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                alt="Адель Руслановна">
+                                alt="Адель Руслановна" loading="lazy">
                         </div>
                         <h4 class="text-lg font-bold ml-2">Адель Руслановна</h4>
                         <p class="text-slate-500 text-xs mb-4 ml-2">Подростковые группы</p>
@@ -754,7 +772,7 @@
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT4.webp"
                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                alt="Александра Владиславовна">
+                                alt="Александра Владиславовна" loading="lazy">
                         </div>
                         <h4 class="text-lg font-bold ml-2">Александра Владиславовна</h4>
                         <p class="text-slate-500 text-xs mb-4 ml-2">Психолог, педагог</p>
@@ -796,13 +814,13 @@
                         <div class="grid grid-cols-3 gap-2">
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
                                     src="img/t1.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram"></div>
+                                    alt="Фото из Telegram" loading="lazy"></div>
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
                                     src="img/t2.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram"></div>
+                                    alt="Фото из Telegram" loading="lazy"></div>
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
                                     src="img/t3.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram"></div>
+                                    alt="Фото из Telegram" loading="lazy"></div>
                         </div>
                         <a href="https://t.me/manuel_academy" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center mt-6 text-blue-500 font-bold text-sm bg-blue-50 px-5 py-3 rounded-xl hover:bg-blue-100 transition">
@@ -1032,7 +1050,7 @@
         </button>
     </div>
 
-    <script src="js/modal.js"></script> <!-- Ensure this is included -->
+    <script src="js/modal.js" defer></script> <!-- Ensure this is included -->
     <script>
         // Icons
         lucide.createIcons();
