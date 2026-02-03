@@ -14,7 +14,10 @@ function doPost(e) {
     if (!sheet) {
       sheet = doc.insertSheet(SHEET_NAME);
       // Create headers
-      sheet.appendRow(["Timestamp", "Type", "Name", "Phone", "Status", "Notes"]);
+      var headerRow = ["Timestamp", "Type", "Name", "Phone", "Status", "Notes",
+        "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+        "referrer", "page_url", "user_agent", "ip_address", "screen_res", "timezone"];
+      sheet.appendRow(headerRow);
     }
 
     var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
@@ -22,6 +25,7 @@ function doPost(e) {
 
     var newRow = headers.map(function (header) {
       if (header === "Timestamp") return new Date();
+      // Try exact match first, then lowercase
       return e.parameter[header] || e.parameter[header.toLowerCase()] || "";
     });
 
@@ -32,11 +36,13 @@ function doPost(e) {
     var type = e.parameter.type || "Не указан";
     var name = e.parameter.name || "Не указано";
     var phone = e.parameter.phone || "Не указан";
+    var source = e.parameter.utm_source || "Прямой заход";
 
     var emailBody = "Новая заявка!\n\n" +
       "Тип: " + type + "\n" +
       "Имя: " + name + "\n" +
       "Телефон: " + phone + "\n\n" +
+      "Источник: " + source + "\n" +
       "Дата: " + new Date().toLocaleString() + "\n" +
       "Ссылка на таблицу: " + doc.getUrl();
 
@@ -64,6 +70,9 @@ function setup() {
   var sheet = doc.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = doc.insertSheet(SHEET_NAME);
-    sheet.appendRow(["Timestamp", "Type", "Name", "Phone", "Status", "Notes"]);
+    var headerRow = ["Timestamp", "Type", "Name", "Phone", "Status", "Notes",
+      "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+      "referrer", "page_url", "user_agent", "ip_address", "screen_res", "timezone"];
+    sheet.appendRow(headerRow);
   }
 }

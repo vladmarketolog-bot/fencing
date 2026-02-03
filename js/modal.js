@@ -173,7 +173,39 @@ function closeModal() {
     }
 }
 
-function submitForm(event) {
+async function getAnalyticsData() {
+    const analytics = {
+        url: window.location.href,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        language: navigator.language
+    };
+
+    // Parse UTMs
+    const urlParams = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(param => {
+        if (urlParams.has(param)) {
+            analytics[param] = urlParams.get(param);
+        }
+    });
+
+    // Try to get IP (lightweight)
+    try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        if (res.ok) {
+            const json = await res.json();
+            analytics.ip = json.ip;
+        }
+    } catch (e) {
+        console.warn('IP fetch failed', e);
+    }
+
+    return analytics;
+}
+
+async function submitForm(event) {
     event.preventDefault();
 
     if (GOOGLE_SCRIPT_URL === "YOUR_WEB_APP_URL_HERE") {
@@ -185,6 +217,10 @@ function submitForm(event) {
     const btn = document.getElementById('submit-btn');
     const spinner = document.getElementById('loading-spinner');
 
+    // Elements - re-select to be safe
+    const successDiv = document.getElementById('modal-success');
+    const formDiv = document.getElementById('modal-form-container');
+
     // UI Loading State
     btn.disabled = true;
     btn.classList.add('opacity-75', 'cursor-not-allowed');
@@ -195,15 +231,26 @@ function submitForm(event) {
     const data = {};
     formData.forEach((value, key) => data[key] = value);
 
-    // Send Data (JSONP or CORS)
-    // Using fetch with no-cors for simplicity with opaque response, 
-    // OR using standard post if script returns CORS headers correctly (which our script does)
+    // Enrich with Analytics
+    try {
+        const analytics = await getAnalyticsData();
+        Object.assign(data, {
+            utm_source: analytics.utm_source || '',
+            utm_medium: analytics.utm_medium || '',
+            utm_campaign: analytics.utm_campaign || '',
+            utm_term: analytics.utm_term || '',
+            utm_content: analytics.utm_content || '',
+            referrer: analytics.referrer || '',
+            page_url: analytics.url || '',
+            user_agent: analytics.userAgent || '',
+            ip_address: analytics.ip || '',
+            screen_res: analytics.screen || '',
+            timezone: analytics.timezone || ''
+        });
+    } catch (e) {
+        console.warn('Analytics collection failed', e);
+    }
 
-    // Construct URL with params for GET/POST mix or just POST form data
-    // Google Apps Script doPost handles weirdly with fetch sometimes, 
-    // but building a FormData object is robust.
-
-    // Let's us URLSearchParams for x-www-form-urlencoded which is standard for Apps Script doPost(e)
     const params = new URLSearchParams(data);
 
     fetch(GOOGLE_SCRIPT_URL, {
@@ -211,31 +258,35 @@ function submitForm(event) {
         body: params
     })
         .then(response => {
-            // Apps Script often sends a 302 redirect which fetch follows automatically?
-            // Or successful JSON.
-            // If we did 'no-cors' we wouldn't see response.
-            // Assuming we rely on the script returning JSON.
-            return response.json().catch(() => ({ result: "success" })); // Fallback if response is opaque
+            return response.json().catch(() => ({ result: "success" }));
         })
         .then(result => {
-            // Show Success UI
-            const successDiv = document.getElementById('modal-success');
-            const formDiv = document.getElementById('modal-form-container');
-
-            if (formDiv) formDiv.classList.add('hidden');
+            // Success UI
             if (successDiv) successDiv.classList.remove('hidden');
-            if (typeof lucide !== 'undefined') lucide.createIcons();
+            if (formDiv) formDiv.classList.add('hidden');
+
+            // Auto close after 3 seconds
+            setTimeout(() => {
+                closeModal();
+                // Reset form state after closing
+                setTimeout(() => {
+                    successDiv.classList.add('hidden');
+                    formDiv.classList.remove('hidden');
+                    form.reset();
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    if (spinner) spinner.classList.add('hidden');
+                }, 300);
+            }, 3000);
         })
         .catch(error => {
             console.error('Error:', error);
             alert('Произошла ошибка при отправке. Пожалуйста, позвоните нам.');
-        })
-        .finally(() => {
-            // Reset UI
+
+            // Allow retry
             btn.disabled = false;
             btn.classList.remove('opacity-75', 'cursor-not-allowed');
             if (spinner) spinner.classList.add('hidden');
-            form.reset();
         });
 }
 
