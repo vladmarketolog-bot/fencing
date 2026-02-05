@@ -70,6 +70,10 @@
 
     <script src="js/tailwindcss.js"></script>
 
+    <!-- Preload critical fonts for instant rendering -->
+    <link rel="preload" href="css/fonts/Manrope-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="css/fonts/Manrope-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="css/fonts/Manrope-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="css/fonts.css">
 
     <script src="js/lucide.js" defer></script>
@@ -313,34 +317,27 @@
                             <img src="img/1.webp" alt="Фехтование для детей"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
                                 alt="Современное фехтование для детей" fetchpriority="high">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/2.webp" alt="Тренировка взрослых"
+                            <img src="img/2.webp" alt="Тренировка взрослых"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Безопасная экипировка 2026" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/3.webp" alt="Соревнования по фехтованию"
+                                alt="Безопасная экипировка 2026">
+                            <img src="img/3.webp" alt="Соревнования по фехтованию"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Технологии в спорте" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/4.webp" alt="Эмоции победы"
+                                alt="Технологии в спорте">
+                            <img src="img/4.webp" alt="Эмоции победы"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Развитие реакции и интеллекта" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/5.webp" alt="Фехтовальная экипировка"
+                                alt="Развитие реакции и интеллекта">
+                            <img src="img/5.webp" alt="Фехтовальная экипировка"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Детские группы фехтования" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/6.webp" alt="Индивидуальный урок"
+                                alt="Детские группы фехтования">
+                            <img src="img/6.webp" alt="Индивидуальный урок"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Турниры и победы" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/7.webp" alt="Детская группа"
+                                alt="Турниры и победы">
+                            <img src="img/7.webp" alt="Детская группа"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Эмоции и характер" loading="lazy">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                data-src="img/8.webp" alt="Турнир Manuel Academy"
+                                alt="Эмоции и характер">
+                            <img src="img/8.webp" alt="Турнир Manuel Academy"
                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
-                                alt="Команда Manuel Academy" loading="lazy">
+                                alt="Команда Manuel Academy">
                         </div>
 
                         <!-- Gradient Overlay -->
@@ -384,16 +381,8 @@
                                 let currentSlide = 0;
                                 const totalSlides = slides.length;
 
-                                // --- PERFORMANCE OPTIMIZATION: LOAD REST IMAGES AFTER START ---
-                                setTimeout(() => {
-                                    slides.forEach(img => {
-                                        if (img.dataset.src) {
-                                            img.src = img.dataset.src;
-                                            img.removeAttribute('data-src');
-                                        }
-                                    });
-                                }, 2500); // Start loading 2.5s after page load
-                                // -----------------------------------------------------------
+                                // Images now load immediately via src attribute
+
 
                                 function showSlide(index) {
                                     slides.forEach(slide => {

@@ -1,30 +1,33 @@
-/* Manrope */
+/* Manrope - Optimized for instant rendering */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/Manrope-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/Manrope-Medium.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/Manrope-Bold.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/Manrope-ExtraBold.ttf') format('truetype');
 }
 
@@ -33,13 +36,14 @@
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url('fonts/JetBrainsMono-Bold.ttf') format('truetype');
 }

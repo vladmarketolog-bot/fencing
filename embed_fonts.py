@@ -1,8 +1,11 @@
-
 import base64
 import os
 
-# Mapping of current CSS rules to files
+# Configuration
+# Assuming script is run from project root
+BASE_DIR = os.path.join(os.getcwd(), 'css', 'fonts')
+OUTPUT_FILE = os.path.join(os.getcwd(), 'css', 'fonts_embedded.css')
+
 fonts = [
     {
         'family': 'Manrope',
@@ -42,33 +45,53 @@ fonts = [
     }
 ]
 
-base_dir = r"c:\Users\VLAD\Documents\GitHub\fencing\css\fonts"
-output_css = []
+def create_embedded_css():
+    print(f"Searching for fonts in: {BASE_DIR}")
+    if not os.path.exists(BASE_DIR):
+        print(f"Error: Directory {BASE_DIR} not found.")
+        return
 
-print("Starting font embedding...")
+    output_css = []
 
-for font in fonts:
-    file_path = os.path.join(base_dir, font['file'])
-    print(f"Processing {font['file']}...")
-    try:
-        with open(file_path, "rb") as f:
-            encoded = base64.b64encode(f.read()).decode('utf-8')
+    for font in fonts:
+        file_path = os.path.join(BASE_DIR, font['file'])
+        print(f"Processing {font['file']}...")
+        
+        if not os.path.exists(file_path):
+            print(f"  Warning: File not found: {file_path}")
+            continue
+
+        try:
+            with open(file_path, "rb") as f:
+                encoded = base64.b64encode(f.read()).decode('utf-8')
             
-        css_rule = f"""@font-face {{
+            # Using font-display: optional or swap. 
+            # 'swap' is safer for general text, 'block' or 'optional' might be better for hero if we want NO flicker, 
+            # but since it's embedded, it should load with CSS. 
+            # We keep 'swap' as per original or standard practice, but since it's base64 in CSS, it's effectively immediate once CSS parses.
+            css_rule = f"""@font-face {{
   font-family: '{font['family']}';
   font-style: {font['style']};
   font-weight: {font['weight']};
   font-display: swap;
   src: url('data:font/ttf;charset=utf-8;base64,{encoded}') format('truetype');
 }}"""
-        output_css.append(css_rule)
+            output_css.append(css_rule)
+        except Exception as e:
+            print(f"  Error processing {font['file']}: {e}")
+
+    if not output_css:
+        print("No fonts were processed. CSS generation aborted.")
+        return
+
+    final_css_content = "\n".join(output_css)
+    
+    try:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            f.write(final_css_content)
+        print(f"Successfully created {OUTPUT_FILE}")
     except Exception as e:
-        print(f"Error processing {font['file']}: {e}")
+        print(f"Error writing output file: {e}")
 
-final_css_content = "\n".join(output_css)
-
-output_file = r"c:\Users\VLAD\Documents\GitHub\fencing\css\fonts_embedded.css"
-with open(output_file, "w", encoding="utf-8") as f:
-    f.write(final_css_content)
-
-print(f"Successfully created {output_file}")
+if __name__ == "__main__":
+    create_embedded_css()
