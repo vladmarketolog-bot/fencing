@@ -572,8 +572,8 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="relative order-2 lg:order-1">
                         <div class="absolute inset-0 bg-green-100 rounded-[3rem] rotate-3 transform"></div>
-                        <img src="img/2.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
-                            alt="Взрослый занимается фехтованием" loading="lazy">
+                        <img src="img/d1.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
+                            alt="Ребенок занимается фехтованием" loading="lazy">
                     </div>
                     <div class="order-1 lg:order-2">
                         <span
@@ -734,7 +734,7 @@
                         class="bg-white p-5 rounded-[2.5rem] shadow-sm border border-slate-100 group hover:-translate-y-1 transition">
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT3.webp"
-                                class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                                 alt="Диляра Ильдаровна" loading="lazy">
                         </div>
                         <h4 class="font-bold text-lg ml-2">Диляра Ильдаровна</h4>
@@ -825,16 +825,28 @@
                         <h2 class="text-3xl font-black mb-6">ОТЗЫВ МАМЫ</h2>
                         <!-- VIDEO TESTIMONIAL PLACEHOLDER -->
                         <div
-                            class="bg-slate-900 rounded-[2.5rem] aspect-video flex items-center justify-center relative group cursor-pointer overflow-hidden">
-                            <img src="img/2.webp" class="w-full h-full object-cover opacity-60"
-                                alt="Фехтование для всех" loading="lazy">
-                            <div
-                                class="absolute w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition">
-                                <i data-lucide="play" class="w-6 h-6 text-white fill-white"></i>
+                            class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 h-full flex flex-col justify-center">
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div
+                                    class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center font-bold text-orange-600 text-2xl">
+                                    Е</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Елена</h4>
+                                    <p class="text-sm text-slate-500">Мама Артема (7 лет)</p>
+                                </div>
                             </div>
-                            <div class="absolute bottom-6 left-6 text-white">
-                                <p class="font-bold">Елена, мама Артема (7 лет)</p>
-                                <p class="text-xs opacity-70">"Перестали болеть и выпрямили спину..."</p>
+                            <div class="mb-6">
+                                <p class="text-slate-700 text-lg leading-relaxed font-medium italic">
+                                    "Заметили, что Артем стал меньше сутулиться и перестал болеть простудами. Очень
+                                    нравится атмосфера — тренеры внимательные, но требовательные. Сын в восторге!"
+                                </p>
+                            </div>
+                            <div class="flex text-yellow-400 space-x-1">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             </div>
                         </div>
                     </div>
@@ -852,49 +864,60 @@
 
                 <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Location 1 -->
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 relative group overflow-hidden">
                         <div
-                            class="bg-orange-50 w-10 h-10 rounded-full flex items-center justify-center text-orange-600 mb-4">
-                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            class="absolute top-0 right-0 bg-orange-100 text-orange-700 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wide">
+                            Центр</div>
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="font-black text-lg mb-2">ул. Назарбаева, 21/64</h3>
-                        <p class="text-slate-600 text-sm mb-4">СУКОННАЯ СЛОБОДА</p>
-                        <ul class="text-xs text-slate-400 space-y-2 mb-4">
-                            <li>• Рядом с метро Суконная слобода</li>
-                            <li>• Зона ожидания с Wi-Fi</li>
-                        </ul>
-                        <a href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer"
-                            class="text-orange-600 text-xs font-bold uppercase">Показать на карте</a>
+                        <h3 class="text-lg font-black text-slate-900 mb-2">Суконная слобода</h3>
+                        <p class="text-slate-500 font-medium mb-4">ул. Назарбаева, 21/64</p>
+                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Вход со двора, 3 этаж. 5 минут от
+                            метро Суконная слобода.</p>
+                        <a href="https://yandex.ru/maps/-/CPErmGyV" target="_blank"
+                            class="text-orange-600 text-xs font-bold uppercase hover:underline">Показать на
+                            карте</a>
                     </div>
+
                     <!-- Location 2 -->
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 relative group overflow-hidden">
                         <div
-                            class="bg-orange-50 w-10 h-10 rounded-full flex items-center justify-center text-orange-600 mb-4">
-                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            class="absolute top-0 right-0 bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wide">
+                            Квартал</div>
+                        <div
+                            class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="font-black text-lg mb-2">ул. Мулланура Вахитова, 10</h3>
-                        <p class="text-slate-600 text-sm mb-4">КОЗЬЯ СЛОБОДА</p>
-                        <ul class="text-xs text-slate-400 space-y-2 mb-4">
-                            <li>• Рядом с метро Козья слобода</li>
-                            <li>• Новые душевые</li>
-                        </ul>
-                        <a href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer"
-                            class="text-orange-600 text-xs font-bold uppercase">Показать на карте</a>
+                        <h3 class="text-lg font-black text-slate-900 mb-2">Козья слобода</h3>
+                        <p class="text-slate-500 font-medium mb-4">ул. Мулланура Вахитова, 10</p>
+                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Новый зал с современными дорожками.
+                            Есть парковка.</p>
+                        <a href="https://yandex.ru/maps/-/CPErm0Zu" target="_blank"
+                            class="text-orange-600 text-xs font-bold uppercase hover:underline">Показать на
+                            карте</a>
                     </div>
+
                     <!-- Location 3 -->
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 relative group overflow-hidden">
                         <div
-                            class="bg-orange-50 w-10 h-10 rounded-full flex items-center justify-center text-orange-600 mb-4">
-                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            class="absolute top-0 right-0 bg-green-100 text-green-700 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wide">
+                            Иннополис</div>
+                        <div
+                            class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="font-black text-lg mb-2">ул. Парковая, 22</h3>
-                        <p class="text-slate-600 text-sm mb-4">ИННОПОЛИС</p>
-                        <ul class="text-xs text-slate-400 space-y-2 mb-4">
-                            <li>• Большая парковка</li>
-                            <li>• Комфортный зал</li>
-                        </ul>
-                        <a href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer"
-                            class="text-orange-600 text-xs font-bold uppercase">Показать на карте</a>
+                        <h3 class="text-lg font-black text-slate-900 mb-2">Иннополис</h3>
+                        <p class="text-slate-500 font-medium mb-4">ул. Парковая, 22</p>
+                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">Спортивный комплекс. Для жителей и
+                            гостей города.</p>
+                        <a href="https://yandex.ru/maps/-/CPErm86O" target="_blank"
+                            class="text-orange-600 text-xs font-bold uppercase hover:underline">Показать на
+                            карте</a>
                     </div>
                 </div>
 
@@ -951,7 +974,7 @@
                     <img src="img/logo.svg" alt="MANUEL Academy" class="h-16 w-auto mb-4" loading="lazy">
                 </a>
                 <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
-                    Академия спортивного фехтования. Лицензия №12345.
+                    Академия спортивного фехтования.
                     Мы растим не только чемпионов, но и достойных людей. Развиваем тело и интеллект через благородный
                     спорт.
                 </p>
@@ -1013,8 +1036,8 @@
                     </li>
                     <li class="flex items-center">
                         <i data-lucide="mail" class="w-4 h-4 mr-3 text-orange-600"></i>
-                        <a href="mailto:info@manuel-kazan.ru"
-                            class="hover:text-white transition-colors">info@manuel-kazan.ru</a>
+                        <a href="mailto:fencing.academy@yandex.ru"
+                            class="hover:text-white transition-colors">fencing.academy@yandex.ru</a>
                     </li>
                 </ul>
             </div>
