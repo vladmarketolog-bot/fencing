@@ -1,0 +1,24 @@
+{
+  "name": "fencing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "google_apps_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladmarketolog-bot/fencing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vladmarketolog-bot/fencing/issues"
+  },
+  "homepage": "https://github.com/vladmarketolog-bot/fencing#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -70,6 +70,10 @@
 
     <script src="js/tailwindcss.js"></script>
 
+    <!-- Preconnect to external APIs for faster connections -->
+    <link rel="preconnect" href="https://api.ipify.org" crossorigin>
+    <link rel="preconnect" href="https://script.google.com" crossorigin>
+
     <!-- Preload critical fonts for instant rendering -->
     <link rel="preload" href="css/fonts/Manrope-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="css/fonts/Manrope-Bold.ttf" as="font" type="font/ttf" crossorigin>
@@ -568,8 +572,8 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="relative order-2 lg:order-1">
                         <div class="absolute inset-0 bg-green-100 rounded-[3rem] rotate-3 transform"></div>
-                        <img src="img/1.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
-                            alt="Ребенок занимается фехтованием" loading="lazy">
+                        <img src="img/2.webp" class="relative rounded-[3rem] shadow-2xl border-8 border-white"
+                            alt="Взрослый занимается фехтованием" loading="lazy">
                     </div>
                     <div class="order-1 lg:order-2">
                         <span
@@ -715,8 +719,8 @@
                         class="bg-white p-5 rounded-[2.5rem] shadow-sm border border-slate-100 group hover:-translate-y-1 transition">
                         <div class="aspect-square bg-slate-200 rounded-[2rem] overflow-hidden mb-5">
                             <img src="img/TT1.webp"
-                                class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                alt="Регина Ринатовна" loading="lazy">
+                                class="w-full h-full object-cover rounded-3xl shadow-xl border-8 border-white/50"
+                                alt="Опытный тренер" loading="lazy">
                         </div>
                         <h4 class="font-bold text-lg ml-2">Регина Ринатовна</h4>
                         <p class="text-slate-500 text-xs mb-4 ml-2">Старший тренер, МС</p>
@@ -802,14 +806,14 @@
                         <!-- INSTAGRAM PLACEHOLDER -->
                         <div class="grid grid-cols-3 gap-2">
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
-                                    src="img/t1.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram" loading="lazy"></div>
+                                    src="img/t1.webp" class="w-full h-full object-cover" alt="Мастер-класс"
+                                    loading="lazy"></div>
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
-                                    src="img/t2.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram" loading="lazy"></div>
+                                    src="img/t2.webp" class="w-full h-full object-cover" alt="Летний лагерь"
+                                    loading="lazy"></div>
                             <div class="aspect-square bg-slate-100 rounded-[1.5rem] overflow-hidden"><img
-                                    src="img/t3.webp" class="w-full h-full object-cover hover:scale-110 transition"
-                                    alt="Фото из Telegram" loading="lazy"></div>
+                                    src="img/t3.webp" class="w-full h-full object-cover" alt="Клубная встреча"
+                                    loading="lazy"></div>
                         </div>
                         <a href="https://t.me/manuel_academy" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center mt-6 text-blue-500 font-bold text-sm bg-blue-50 px-5 py-3 rounded-xl hover:bg-blue-100 transition">
@@ -823,7 +827,7 @@
                         <div
                             class="bg-slate-900 rounded-[2.5rem] aspect-video flex items-center justify-center relative group cursor-pointer overflow-hidden">
                             <img src="img/2.webp" class="w-full h-full object-cover opacity-60"
-                                alt="Видео отзыв от Елены">
+                                alt="Фехтование для всех" loading="lazy">
                             <div
                                 class="absolute w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition">
                                 <i data-lucide="play" class="w-6 h-6 text-white fill-white"></i>
@@ -944,7 +948,7 @@
             class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 border-b border-white/10 pb-12 mb-8">
             <div class="col-span-2 lg:col-span-2">
                 <a href="#" class="inline-block mb-6 group">
-                    <img src="img/logo.svg" alt="MANUEL Academy" class="h-16 w-auto mb-4">
+                    <img src="img/logo.svg" alt="MANUEL Academy" class="h-16 w-auto mb-4" loading="lazy">
                 </a>
                 <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
                     Академия спортивного фехтования. Лицензия №12345.
@@ -1039,7 +1043,7 @@
         </button>
     </div>
 
-    <script src="js/modal.js" defer></script> <!-- Ensure this is included -->
+    <script src="js/modal.min.js" defer></script> <!-- Minified for performance -->
     <script>
         // Icons
         lucide.createIcons();
