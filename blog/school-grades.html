@@ -64,24 +64,26 @@
     <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 h-20 transition-all">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
             <a href="../index.html" class="flex items-center space-x-2 cursor-pointer group">
-                <span class="text-2xl font-extrabold tracking-tighter text-slate-900">MANUEL<span
-                        class="text-orange-600">.</span></span>
+                <img src="../img/logo.svg" alt="MANUEL Academy" class="h-12 w-auto" width="48" height="48">
             </a>
 
-            <!-- Desktop Menu -->
+            <!-- Desktop Menu (Grouped & Clean) -->
             <div
                 class="hidden md:flex space-x-8 items-center font-bold text-sm uppercase tracking-widest text-slate-500">
-                <div class="relative group py-6">
+
+                <!-- Dropdown: Programs -->
+                <div class="relative group py-6"> <!-- py-6 to bridge the gap for hover -->
                     <button
                         class="flex items-center space-x-1 hover:text-orange-600 transition group-hover:text-orange-600">
                         <span>ПРОГРАММЫ</span>
                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </button>
+                    <!-- Dropdown Content -->
                     <div
-                        class="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        class="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 text-initial font-normal">
                         <a href="../childrens_groups.html"
                             class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
-                            <span class="block text-slate-900 font-black">Детям (5-8 лет)</span>
+                            <span class="block text-slate-900 font-bold">Детям (5-8 лет)</span>
                         </a>
                         <a href="../teenagers.html"
                             class="block px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-orange-600 transition">
