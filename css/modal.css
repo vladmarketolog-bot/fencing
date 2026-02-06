@@ -20,17 +20,4 @@
     /* orange-800 */
 }
 
-/* Mobile Sticky Button Animation */
-.sticky-btn-appear {
-    animation: slideUp 0.5s ease-out forwards;
-}
 
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}

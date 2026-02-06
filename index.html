@@ -200,8 +200,10 @@
                     <i data-lucide="send" class="w-5 h-5"></i>
                 </a>
                 <a href="tel:+79274250351"
-                    class="hidden xl:block text-slate-900 font-bold text-sm hover:text-orange-600 transition">+7 (927)
-                    425-03-51</a>
+                    class="hidden lg:flex w-10 h-10 items-center justify-center text-slate-400 hover:text-orange-600 hover:bg-orange-50 rounded-full transition"
+                    title="Позвонить нам">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </a>
                 <button onclick="openModal()"
                     class="bg-orange-600 text-white px-6 py-3 rounded-full font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-orange-200 transition-all hover:-translate-y-0.5 flex items-center group">
                     <span>Пробное 0₽</span>
@@ -229,7 +231,7 @@
             <a href="summer_camp.html" onclick="toggleMobileMenu()"
                 class="block text-lg font-bold text-green-600 hover:text-green-700 transition pl-4 border-l-2 border-green-100 hover:border-green-600">Летний
                 лагерь ☀️</a>
-            <a href="Individual_lessons.html" onclick="toggleMobileMenu()"
+            <a href="private.html" onclick="toggleMobileMenu()"
                 class="block text-lg font-bold text-slate-700 hover:text-orange-600 transition pl-4 border-l-2 border-slate-100 hover:border-orange-600">Индивидуально</a>
 
             <div class="h-px bg-slate-100 my-2"></div>
@@ -997,7 +999,7 @@
                             лет)</a></li>
                     <li><a href="adults.html" class="hover:text-orange-500 transition-colors">Взрослые (18+)</a>
                     </li>
-                    <li><a href="Individual_lessons.html" class="hover:text-orange-500 transition-colors">Индивидуальные
+                    <li><a href="private.html" class="hover:text-orange-500 transition-colors">Индивидуальные
                             уроки</a></li>
                     <li><a href="summer_camp.html" class="hover:text-orange-500 transition-colors">Летний лагерь</a>
                     </li>
@@ -1057,45 +1059,7 @@
         </div>
     </footer>
 
-    <!-- MOBILE STICKY BUTTON (Conversion Booster) -->
-    <div
-        class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-4 z-50 sticky-btn-appear shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
-        <button onclick="openModal()"
-            class="w-full bg-orange-600 text-white font-black uppercase text-sm py-4 rounded-xl shadow-lg shadow-orange-200 active:scale-95 transition">
-            Записаться на пробное (0₽)
-        </button>
-    </div>
 
-    <script src="js/modal.js" defer></script> <!-- Reverted to fix loading issues -->
-    <script>
-        // Icons
-        lucide.createIcons();
-
-        // Mobile Menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        }
-
-        // Add sticky button logic for mobile
-        const stickyBtn = document.getElementById('sticky-cta');
-        if (stickyBtn) {
-            let lastScroll = 0;
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                // Show button after scrolling down 300px
-                if (currentScroll > 300) {
-                    stickyBtn.classList.remove('hidden');
-                    stickyBtn.classList.add('flex');
-                } else {
-                    stickyBtn.classList.add('hidden');
-                    stickyBtn.classList.remove('flex');
-                }
-                lastScroll = currentScroll;
-            });
-        }
-    </script>
 </body>
 
 </html>
