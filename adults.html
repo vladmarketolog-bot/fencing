@@ -34,6 +34,11 @@
     <script src="js/lucide.js"></script>
 
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Manrope', sans-serif;
         }
@@ -285,14 +290,17 @@
 
                     <!-- Floating Social Proof Badge -->
                     <div
-                        class="absolute bottom-12 -left-12 bg-slate-800/90 backdrop-blur-md p-6 rounded-3xl border border-white/10 shadow-2xl max-w-xs z-20">
+                        class="absolute bottom-6 left-6 lg:bottom-12 lg:-left-12 bg-slate-800/90 backdrop-blur-md p-6 rounded-3xl border border-white/10 shadow-2xl max-w-xs z-20">
                         <div class="flex -space-x-3 mb-4">
-                            <img class="w-10 h-10 rounded-full border-2 border-slate-800"
-                                src="https://i.pravatar.cc/100?img=11" alt="User">
-                            <img class="w-10 h-10 rounded-full border-2 border-slate-800"
-                                src="https://i.pravatar.cc/100?img=32" alt="User">
-                            <img class="w-10 h-10 rounded-full border-2 border-slate-800"
-                                src="https://i.pravatar.cc/100?img=53" alt="User">
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-slate-800 bg-slate-700 flex items-center justify-center">
+                                <i data-lucide="user" class="w-5 h-5 text-slate-400"></i></div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-slate-800 bg-slate-600 flex items-center justify-center">
+                                <i data-lucide="user" class="w-5 h-5 text-slate-300"></i></div>
+                            <div
+                                class="w-10 h-10 rounded-full border-2 border-slate-800 bg-slate-500 flex items-center justify-center">
+                                <i data-lucide="user" class="w-5 h-5 text-slate-200"></i></div>
                             <div
                                 class="w-10 h-10 rounded-full border-2 border-slate-800 bg-slate-700 flex items-center justify-center text-xs font-bold text-white">
                                 30+</div>
@@ -434,8 +442,10 @@
                     <!-- Review 1 -->
                     <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
                         <div class="flex items-center space-x-4 mb-6">
-                            <img src="https://i.pravatar.cc/150?img=11"
-                                class="w-14 h-14 rounded-full border-2 border-orange-500" alt="Алексей">
+                            <div
+                                class="w-14 h-14 rounded-full border-2 border-orange-500 bg-orange-50 flex items-center justify-center text-orange-500">
+                                <i data-lucide="user" class="w-8 h-8"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold">Алексей М.</h4>
                                 <p class="text-xs text-slate-400">IT Director, 34 года</p>
@@ -460,8 +470,10 @@
                     <!-- Review 2 -->
                     <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
                         <div class="flex items-center space-x-4 mb-6">
-                            <img src="https://i.pravatar.cc/150?img=5"
-                                class="w-14 h-14 rounded-full border-2 border-purple-500" alt="Елена">
+                            <div
+                                class="w-14 h-14 rounded-full border-2 border-purple-500 bg-purple-50 flex items-center justify-center text-purple-500">
+                                <i data-lucide="user" class="w-8 h-8"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold">Елена В.</h4>
                                 <p class="text-xs text-slate-400">Маркетолог, 29 лет</p>
@@ -485,8 +497,10 @@
                     <!-- Review 3 -->
                     <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
                         <div class="flex items-center space-x-4 mb-6">
-                            <img src="https://i.pravatar.cc/150?img=60"
-                                class="w-14 h-14 rounded-full border-2 border-blue-500" alt="Дмитрий">
+                            <div
+                                class="w-14 h-14 rounded-full border-2 border-blue-500 bg-blue-50 flex items-center justify-center text-blue-500">
+                                <i data-lucide="user" class="w-8 h-8"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold">Дмитрий К.</h4>
                                 <p class="text-xs text-slate-400">Предприниматель, 42 года</p>

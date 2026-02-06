@@ -32,6 +32,11 @@
     <script src="js/lucide.js"></script>
 
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Manrope', sans-serif;
         }
@@ -251,7 +256,8 @@
                         class="absolute inset-0 w-full h-full object-cover z-10 rounded-[3rem] shadow-2xl transition duration-700"
                         alt="Индивидуальный урок">
                     <!-- Efficiency Badge -->
-                    <div class="absolute bottom-12 -left-12 bg-white text-slate-900 p-6 rounded-3xl shadow-2xl z-20">
+                    <div
+                        class="absolute bottom-6 left-6 lg:bottom-12 lg:-left-12 bg-white text-slate-900 p-6 rounded-3xl shadow-2xl z-20">
                         <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Эффективность</p>
                         <p class="text-2xl font-black">1 ЧАС = 4 ЧАСА</p>
                         <p class="text-xs text-slate-500">групповой тренировки</p>
